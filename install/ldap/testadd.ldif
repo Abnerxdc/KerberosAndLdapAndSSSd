@@ -1,0 +1,12 @@
+dn: uid=abner03,ou=krb5,dc=hadoop,dc=com
+objectClass: account
+objectClass: posixAccount
+objectClass: top
+objectClass: shadowAccount
+uid: abner03
+cn: abner03
+loginShell: /bin/bash
+userPassword: {SSHA}wtIFbEat8Xwk19oDM6QAwMqn/9wdu/nU
+uidNumber: 22334455
+gidNumber: 2333
+homeDirectory: /home/abner03

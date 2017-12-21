@@ -1,0 +1,32 @@
+dn: olcDatabase={2}bdb,cn=config
+changetype: modify
+replace: olcSyncRepl
+olcSyncRepl:rid=003
+  provider=ldap://host-11-2
+  binddn="cn=Manager,dc=hadoop,dc=com"
+  bindmethod=simple
+  credentials=12345
+  searchbase="dc=hadoop,dc=com"
+  type=refreshAndPersist
+  retry="5 5 5 +"
+  timeout=3
+olcSyncRepl:rid=004
+  provider=ldap://host-11-2
+  binddn="cn=Manager,dc=hadoop,dc=com"
+  bindmethod=simple
+  credentials=12345
+  searchbase="dc=hadoop,dc=com"
+  type=refreshAndPersist
+  retry="5 5 5 +"
+  timeout=3
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE
+
+dn: olcOverlay=syncprov,olcDatabase={2}bdb,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+olcSpCheckpoint: 100 10
+olcSpSessionlog: 100

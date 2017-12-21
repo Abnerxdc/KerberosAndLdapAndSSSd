@@ -1,0 +1,32 @@
+[realms]
+ ONLINEQUERY.COM = {
+  kdc = host-11-1
+  admin_server = host-11-1
+  kdc = host-11-2
+  database_module = openldap_ldapconf
+  admin_server = host-11-2
+  default_domain = hadoop.com
+ }
+ HADOOP.COM = {
+  kdc = host-11-1
+  admin_server = host-11-1
+  kdc = host-11-2
+  database_module = openldap_ldapconf
+  admin_server = host-11-2
+  default_domain = hadoop.com
+ }
+ HADOOP.COM = {
+  kdc = host-11-1
+  admin_server = host-11-1
+  kdc = host-11-2
+  database_module = openldap_ldapconf
+  admin_server = host-11-2
+  default_domain = hadoop.com
+ }
+[domain_realm]
+ .hadoop.com = HADOOP.COM
+ hadoop.com = HADOOP.COM
+ .example.com = EXAMPLE.COM
+ example.com = EXAMPLE.COM
+ .example.com = EXAMPLE.COM
+ example.com = EXAMPLE.COM

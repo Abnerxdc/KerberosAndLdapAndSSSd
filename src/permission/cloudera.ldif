@@ -1,0 +1,8 @@
+dn: ou=cloudera,dc=hadoop,dc=com
+ou: cloudera
+objectclass: organizationalUnit
+
+dn: cn=cloudera_admin,ou=Group,dc=hadoop,dc=com
+objectClass: posixGroup
+objectClass: top
+gidNumber: 1998

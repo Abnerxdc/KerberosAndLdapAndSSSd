@@ -1,0 +1,18 @@
+dn: uid=abner,ou=People,dc=hadoop,dc=com
+objectClass: account
+objectClass: posixAccount
+objectClass: top
+objectClass: shadowAccount
+uid: abner
+cn: abner
+loginShell: /bin/bash
+userPassword: {SSHA}wtIFbEat8Xwk19oDM6QAwMqn/9wdu/nU
+uidNumber: 2233
+gidNumber: 2333
+homeDirectory: /home/abner
+
+dn: cn=abner,ou=Group,dc=hadoop,dc=com
+objectClass: posixGroup
+objectClass: top
+gidNumber: 2333
+memberUid: abner

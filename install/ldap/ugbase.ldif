@@ -1,0 +1,9 @@
+dn: ou=Group,dc=hadoop,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Group
+
+dn: ou=People,dc=hadoop,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People

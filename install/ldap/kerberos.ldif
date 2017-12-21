@@ -1,0 +1,17 @@
+dn: ou=krb5,dc=hadoop,dc=com
+ou: krb5
+objectclass: organizationalUnit
+
+dn: cn=kdc-srv,ou=krb5,dc=hadoop,dc=com
+cn: kdc-srv
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+description: Default bind DN for the kerberos KDC Server
+userPassword: {SSHA}wtIFbEat8Xwk19oDM6QAwMqn/9wdu/nU
+
+dn: cn=kdc-adm,ou=krb5,dc=hadoop,dc=com
+cn: kdc-adm
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+description: Default bind DN for the kerberos Administration Server
+userPassword: {SSHA}wtIFbEat8Xwk19oDM6QAwMqn/9wdu/nU

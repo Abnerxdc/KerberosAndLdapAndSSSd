@@ -1,0 +1,12 @@
+dn: uid=kafka_all,ou=cloudera,dc=hadoop,dc=com
+objectClass: account
+objectClass: posixAccount
+objectClass: top
+objectClass: shadowAccount
+uid: kafka_all
+cn: cloudera_admin
+loginShell: /bin/bash
+userPassword: {SSHA}wtIFbEat8Xwk19oDM6QAwMqn/9wdu/nU
+uidNumber: 10005
+gidNumber: 1998
+homeDirectory: /home/kafka_all

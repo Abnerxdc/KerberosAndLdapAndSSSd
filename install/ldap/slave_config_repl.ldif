@@ -1,0 +1,40 @@
+dn: cn=config
+changetype: modify
+replace: olcServerID
+olcServerID: 101 ldap://host-11-1
+olcServerID: 201 ldap://host-11-2
+
+#Enable Syncprov Overlay for config database
+dn: olcOverlay=syncprov,olcDatabase={0}config,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+ObjectClass: olcSyncProvConfig
+olcOverlay: syncprov
+olcSpCheckpoint: 100 10
+olcSpSessionlog: 100
+
+#Configure SyncRepl for config database
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=001
+  provider=ldap://host-11-1
+  binddn="cn=admin,cn=config"
+  bindmethod=simple
+  credentials=12345
+  searchbase="cn=config"
+  type="refreshAndPersist"
+  retry="5 5 300 5"
+  timeout=1
+olcSyncRepl: rid=002
+  provider=ldap://host-11-2
+  binddn="cn=admin,cn=config"
+  bindmethod=simple
+  credentials=12345
+  searchbase="cn=config"
+  type="refreshAndPersist"
+  retry="5 5 300 5"
+  timeout=1
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE

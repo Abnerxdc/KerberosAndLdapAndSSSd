@@ -1,0 +1,13 @@
+[dbdefault]
+ ldap_kerberos_container_dn = ou=krb5,dc=hadoop,dc=com
+
+[dbmodules]
+ openldap_ldapconf = {
+  db_library = kldap
+  ldap_kerberos_container_dn = ou=krb5,dc=hadoop,dc=com
+  ldap_kdc_dn = cn=Manager,dc=hadoop,dc=com
+  ldap_kadmind_dn = cn=Manager,dc=hadoop,dc=com
+  ldap_service_password_file = /etc/krb5.ldap
+  ldap_servers = ldap://host-11-1,ldap://host-11-2
+  ldap_conns_per_server = 5
+}
